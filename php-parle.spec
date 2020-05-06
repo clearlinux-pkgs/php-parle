@@ -4,7 +4,7 @@
 #
 Name     : php-parle
 Version  : 0.8.1
-Release  : 3
+Release  : 4
 URL      : https://pecl.php.net//get/parle-0.8.1.tgz
 Source0  : https://pecl.php.net//get/parle-0.8.1.tgz
 Summary  : No detailed summary available
@@ -12,6 +12,7 @@ Group    : Development/Tools
 License  : BSD-2-Clause BSL-1.0
 Requires: php-parle-lib = %{version}-%{release}
 BuildRequires : buildreq-php
+Patch1: Fix-7.4+-compatibility.patch
 
 %description
 [![Build Status](https://secure.travis-ci.org/weltling/parle.svg?branch=master)](http://travis-ci.org/weltling/parle)
@@ -27,6 +28,8 @@ lib components for the php-parle package.
 
 %prep
 %setup -q -n parle-0.8.1
+cd %{_builddir}/parle-0.8.1
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -45,4 +48,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20180731/parle.so
+/usr/lib64/extensions/no-debug-non-zts-20190902/parle.so
