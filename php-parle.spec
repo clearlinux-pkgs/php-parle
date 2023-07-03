@@ -4,10 +4,10 @@
 # Using build pattern: phpize
 #
 Name     : php-parle
-Version  : 0.8.4
-Release  : 37
-URL      : https://pecl.php.net/get/parle-0.8.4.tgz
-Source0  : https://pecl.php.net/get/parle-0.8.4.tgz
+Version  : 0.8.5
+Release  : 38
+URL      : https://pecl.php.net/get/parle-0.8.5.tgz
+Source0  : https://pecl.php.net/get/parle-0.8.5.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSL-1.0
@@ -42,10 +42,10 @@ license components for the php-parle package.
 
 
 %prep
-%setup -q -n parle-0.8.4
-cd %{_builddir}/parle-0.8.4
+%setup -q -n parle-0.8.5
+cd %{_builddir}/parle-0.8.5
 pushd ..
-cp -a parle-0.8.4 buildavx2
+cp -a parle-0.8.5 buildavx2
 popd
 
 %build
