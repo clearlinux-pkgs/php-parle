@@ -7,7 +7,7 @@
 #
 Name     : php-parle
 Version  : 0.8.5
-Release  : 67
+Release  : 68
 URL      : https://pecl.php.net/get/parle-0.8.5.tgz
 Source0  : https://pecl.php.net/get/parle-0.8.5.tgz
 Summary  : No detailed summary available
